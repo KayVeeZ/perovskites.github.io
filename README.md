@@ -53,10 +53,10 @@ Solarly is developed and maintained by Group 1:
 
 - [Kshitij Vashisth](https://github.com/KayVeeZ)
 - [Ghani Pradita](https://github.com/ghani1506)
-- [Kelvin Hamah](https://github.com/Kelhamaa)
+- [Alex Kelham](https://github.com/Kelhamaa)
 - [Abbey Neave](https://github.com/AbbeyNeave)
 - [Yu Juan](https://github.com/yujuan11)
-- [Alex Nazarov](https://github.com/alex-naz)
+- [Alex Nazareth](https://github.com/alex-naz)
 
 ## Contact
 
