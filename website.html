@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>The Website - Solarly by Group 1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#more {
+				display: none; /* Change to none */
+				overflow: hidden;
+				transition: height 0.3s ease;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<script>
+			var menuTimer;
+	
+			function showMenu() {
+				clearTimeout(menuTimer);
+				var submenu = document.getElementById('submenu1');
+				submenu.style.display = 'block';
+	
+				// Get the bounding rectangles of the menu and submenu
+				var menuBounds = document.querySelector('.menu').getBoundingClientRect();
+				var submenuBounds = submenu.getBoundingClientRect();
+	
+				// Calculate the horizontal position of the submenu
+				if (menuBounds.left < submenuBounds.width) {
+					// If the menu is close to the left edge of the viewport, align the submenu to the right of the menu
+					submenu.style.left = menuBounds.width + 'px';
+				} else {
+					// Otherwise, align the submenu to the left of the menu
+					submenu.style.left = -submenuBounds.width + 'px';
+				}
+	
+				// Calculate the vertical position of the submenu
+				if (menuBounds.bottom + submenuBounds.height > window.innerHeight) {
+					// If the submenu extends beyond the bottom edge of the viewport, position it above the menu
+					submenu.style.top = -submenuBounds.height + 'px';
+				} else {
+					// Otherwise, position it below the menu
+					submenu.style.top = '100%';
+				}
+			}
+	
+			function hideMenu() {
+				menuTimer = setTimeout(function () {
+					document.getElementById('submenu1').style.display = 'none';
+				}, 200); // Delay hiding the menu to allow the user to move the mouse to the submenu
+			}
+	
+			function toggleSubMenu() {
+				var submenu = document.getElementById('submenu1');
+				submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+			}
+	
+			function toggleFullStory() {
+		var moreText = document.getElementById("more");
+		var btnText = document.getElementById("fullStoryBtn");
+	
+		if (moreText.style.height === "0px" || moreText.style.height === "") {
+			// If the content is hidden or has no height style (initial state)
+			moreText.style.display = "block"; // Show the content immediately
+			var height = moreText.scrollHeight + "px"; // Get the full height of the content
+			moreText.style.height = height; // Expand height to full for smooth animation
+			btnText.innerHTML = "Hide Story";
+		} else {
+			// If the content is currently visible
+			moreText.style.height = "0px"; // Collapse height to 0 for animation
+			btnText.innerHTML = "Full Story";
+			setTimeout(function () {
+				moreText.style.display = "none"; // Hide content after animation completes
+			}, 300); // Wait for animation duration (300ms)
+		}
+	}
+	
+	
+	
+		</script>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Solarly</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Solarly</a></li>
+							<li class="active"><a href="website.html">The Website</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post featured">
+								<header class="major">
+									<span class="date">Made with <strike>Flask</strike> Love</span>
+									<h1>Solarly<br />
+									by Group 1</h1>
+									<p>Artificial intelligence is not just about machines thinking; it's about machines augmenting 
+										human intelligence, revolutionizing industries, and shaping the future of civilization. It's a 
+										transformative force that holds the promise of unlocking new frontiers of innovation and solving 
+										some of humanity's most pressing challenges.</p>
+								</header>
+								<a href="index.html" class="image main"><img src="images/Machine_Learning.jpg" alt="" /></a>
+
+								<button class="button large" onclick="toggleFullStory()" id="fullStoryBtn">Full Story</button>
+								
+								<p id="more">Welcome to our website dedicated to the deployment of a machine learning model for predicting 
+									the stability of perovskite materials. Perovskites have garnered significant attention in various fields, 
+									including solar cell technology, due to their unique properties. This website focuses on providing users 
+									with a platform to predict whether a given perovskite material is stable enough for use in creating 
+									solar cells.<br/><br/>
+									<u>Project Overview</u><br/>
+									The website features a Flask-based web application that facilitates the prediction of perovskite stability. 
+									Users can input the chemical composition of a perovskite material, and the application processes this 
+									information using a trained machine learning model. The model outputs a prediction regarding the suitability 
+									of the material for use in solar cells.<br/><br/>
+									
+									<u>Technologies Used</u><br/>	
+									1. Python<br/>
+									2. Flask<br/>
+									3. Pandas<br/>
+									4. Scikit-learn<br/>
+									5. HTML/CSS<br/><br/>
+
+									<u>Key Features</u><br />	
+									1. <b>User-Friendly Interface</b>: The website provides an intuitive interface for users to input the chemical composition of perovskite materials.<br/>
+									2. <b>Real-Time Prediction</b>: Utilizing a machine learning model, the website delivers real-time predictions regarding the stability of perovskite materials.<br /><br/>
+
+									<u>How to use</u><br />
+									1. The user can go to the website <a href="https://predict-solar-cell-materials.onrender.com/" target="_blank">link</a>.
+									<a href="#" class="image main"><img src="images/usage/home.png" alt="" class="image main" /></a> 
+									2. Click on the predict tab in the nav bar. They will be presented with this window:
+									<a href="#" class="image main"><img src="images/usage/pred1.png" alt="" class="image main" /></a>
+									3. On this window the user can select 3 elements for predicting a material made up of said elements, as we are using a perovskite predictor. Perovskites follow the formula ABX<sub>3</sub>.<br/>
+									4. After selecting the elements, the user can click on Generate, and if the material theoretically exists, the formula for that material will be sent to the ML predictor and it will send back the output carrying the result of whether it is a viable material or not. For example, in the case of AgSe<sub>3</sub>I:
+									<a href="#" class="image main"><img src="images/usage/pred2.png" alt="" class="image main" /></a>
+									5. If, the resulting material is not viable, the result will be not viable. For example: AgClO<sub>3</sub><br/>
+									<a href="#" class="image main"><img src="images/usage/pred3.png" alt="" class="image main" /></a>
+									6. If the material is not theoretically possible, the user will be taken to the following window:
+									<a href="#" class="image main"><img src="images/usage/pred4.png" alt="" class="image main" /></a>
+
+								</p>
+							</article>
+
+					</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section class="split contract">
+					<section>
+						<h3>Email</h3>
+						<p><a href="mailto:kshitijv2013@gmail.com">kshitijv2013@gmail.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="https://github.com/KayVeeZ" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/kshitijvashisth/" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://twitter.com/kvashisth1991" class="icon brands alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.instagram.com/kshitijv2013" class="icon brands alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+						</ul>
+					</section>
+				</section>
+
+			</footer>
+
+		<!-- Copyright -->
+			<div id="copyright">
+				<ul><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+	</div>
+
+<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
