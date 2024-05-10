@@ -45,14 +45,14 @@ To use Solarly, follow these steps:
 4. Click on "Generate" to receive a prediction regarding the stability of the material.
 5. Review the prediction result and assess the viability of the material for solar cell applications.
 
-For detailed usage instructions and screenshots, refer to the [Usage section](website.html#more) of the Solarly website.
+For detailed usage instructions and screenshots, refer to the ['How to use' section](https://kayveez.github.io/perovskites.github.io/website.html) of the Solarly portfolio.
 
 ## Contributors
 
 Solarly is developed and maintained by Group 1:
 
 - [Kshitij Vashisth](https://github.com/KayVeeZ)
-- [Ghani Pradita](https://github.com/ghani1506)
+- [Mohammed Bin Ghani](https://github.com/ghani1506)
 - [Alex Kelham](https://github.com/Kelhamaa)
 - [Abbey Neave](https://github.com/AbbeyNeave)
 - [Yu Juan](https://github.com/yujuan11)
